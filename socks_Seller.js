@@ -1,6 +1,6 @@
 function sockMerchant(n,ar){
     const sockHash = {}; //hashmap
-    let sockCount = 0;
+    let sockCount = 0; //socks count
     ar.forEach((socksColor) => { 
         if(!sockHash[socksColor]){
             sockHash[socksColor] = 1;
