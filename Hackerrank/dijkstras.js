@@ -9,7 +9,7 @@ const graph = {
 };
 
 //track lowest value
-const lowest = {
+const weight = {
 a:5,
 b:2,
 finish: Infinity
@@ -23,22 +23,22 @@ const parents = {
 };
 
 //track visited
-const prosc = ["start", "a", "b"];
+const visited = ["start", "a", "b"];
 
 
 //find lowestnodevalue
-const findLowestNode = (lowest, procs) => {
+const findLowestNode = (weights, processed) => {
 
-    const knowNode = Object.keys(lowest)
+    const knowNodes = Object.keys(weights)
 
-    const lowerNode = knowNode.reduce((lower,node) => {
-        if (lower ===null && !procs.includes(node)) {
-            lower =node;
+    const lowerNode = knowNodes.reduce((lowest,node) => {
+        if (lowest ===null && !procs.includes(node)) {
+            lowest =node;
         }
-        if (lowest[node]< lowest[lower]&& !procs.includes(node)) {
-            lower = node;
+        if (weights[node]< weights[lower]&& !procs.includes(node)) {
+            lowest = node;
         }
-        return lower;    
+        return lowest;    
     },null);
     return lowerNode;
 
