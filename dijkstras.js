@@ -85,5 +85,6 @@ const dijkstra = (graph) => {
         distance: weights.finish,
         path:optimalPath
     };
+    return results;
 };
 
