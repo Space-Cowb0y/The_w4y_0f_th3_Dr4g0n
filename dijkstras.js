@@ -8,7 +8,7 @@ const graph = {
     finish:{}
 };
 
-//track lowest value
+/*//track lowest value
 const weight = {
 a:5,
 b:2,
@@ -20,10 +20,10 @@ const parents = {
     a:'start',
     b:'start',
     finish:null
-};
+};*/
 
 //track visited
-const visited = ["start", "a", "b"];
+//const visited = ["start", "a", "b"];
 
 
 //find lowestnodevalue
