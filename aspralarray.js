@@ -4,16 +4,16 @@ const matrix = [
     [17,18,19]
 ];
 
-const spiral = (matrix) => {
-    if(!matrix.lenght || !matrox[0].lenght){
+function spiral(matrix) {
+    if(!matrix.length || !matrix[0].length){
         return[];
     }
-    let rBegin = 0, //row begin
-    rEnd= matrix.lenght-1, //row end
+    var rBegin = 0, //row begin
+    rEnd= matrix.length-1, //row end
     cBegin = 0, //column begin
-    cEnd = matrix[0].lenght-1; //column end
+    cEnd = matrix[0].length-1; //column end
 
-    let result =[];
+    var result =[];
 
     while(rBegin <= rEnd && cBegin <= cEnd ){
         for(let i = cBegin;i <= cEnd; i++){
@@ -23,12 +23,12 @@ const spiral = (matrix) => {
         rBegin++
 
         for(let i = rBegin; i<=rEnd;i++){
-            result.push(matrix[rEnd][i]);
+            result.push(matrix[i][cEnd]);
         }
 
         cEnd--;
 
-        if(eBegin <= rEnd){
+        if(rBegin <= rEnd){
 
             for(let i = cEnd;i>= cBegin;i--){
                 result.push(matrix[rEnd][i])
@@ -39,15 +39,19 @@ const spiral = (matrix) => {
 
         if(cBegin <= cEnd){
             for(let i = rEnd; i>=rBegin;i--){
-                result.push(matrix[i][cbegin]);
+                result.push(matrix[i][cBegin]);
             }
-            cbegin++;
+            
         }
-    return result;
+
+        cBegin++;
+    
     
     }
 
+    console.log(result);
+    return result;
 
+};
 
-     
-}
+spiral(matrix);
