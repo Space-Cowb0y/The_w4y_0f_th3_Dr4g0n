@@ -27,15 +27,15 @@ const parents = {
 
 
 //find lowestnodevalue
-const findLowestNode = (weights, processed) => {
+function findLowestNode(weights, processed){
 
     const knowNodes = Object.keys(weights)
 
     const lowerNode = knowNodes.reduce((lowest,node) => {
-        if (lowest ===null && !procs.includes(node)) {
+        if (lowest ===null && !processed.includes(node)) {
             lowest =node;
         }
-        if (weights[node]< weights[lower]&& !procs.includes(node)) {
+        if (weights[node]< weights[lowest]&& !processed.includes(node)) {
             lowest = node;
         }
         return lowest;    
@@ -44,7 +44,7 @@ const findLowestNode = (weights, processed) => {
 
 }
 
-const dijkstra = (graph) => {
+function dijkstra(graph){
 
     const weights = Object.assign({finish: Infinity}, graph.start);
 
@@ -85,7 +85,9 @@ const dijkstra = (graph) => {
         distance: weights.finish,
         path:optimalPath
     };
+    console.log(results);
     return results;
 };
 
 
+dijkstra(graph);
