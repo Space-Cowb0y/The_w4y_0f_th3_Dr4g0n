@@ -1,4 +1,4 @@
-function gcd(a, b) 
+tokfunction gcd(a, b) 
     { 
         if (a === 0){ 
             return b;
