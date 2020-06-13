@@ -1,7 +1,8 @@
-function Node(value){
-    return{
-        value, next: null
-    };
+class Node {
+    constructor(value){
+        this.value = value;
+        this.next = null;
+    }
 }
 
 class LinkedList {
