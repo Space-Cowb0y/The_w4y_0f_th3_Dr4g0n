@@ -185,6 +185,67 @@ print("Split the words of the string: %s" % s.split(" "))
 # ========================================
 # Condiçoes
 
+x = 2 
+print(x == 2) ## true
+print(x == 3) ## false
+print(x < 3) ## true
+
+## exemplo de operadores boleanos
+'''
+name = "John"
+age = 23
+if name == "John" and age == 23:
+    print("Your name is John, and you are also 23 years old.")
+
+if name == "John" or name == "Rick":
+    print("Your name is either John or Rick.")
+'''
+
+## operador in 
+name = "john"
+if(name in ["john", "Rick"]):
+    print("%s existe" % name)
+
+## operador condicional if
+## LEMBRAR QUE PYTHON USA IDENTADÇAO COMO METODO DE BLOCO
+
+'''
+statement = False
+another_statement = True
+if statement is True:
+    # do something
+    pass
+elif another_statement is True: # else if
+    # do something else
+    pass
+else:
+    # do another thing
+    pass
+'''
+
+if x == 2:
+    print("x equals two!")
+else:
+    print("x does not equal to two.")
+
+## operador is
+
+x = [1,2,3]
+y = [1,2,3]
+print(x == y) ## Prints out True
+print(x is y) ## Prints out False
+x = y
+print(x is y) ##  prints true
+
+## operador not
+
+print(not False) # Prints out True
+print((not False) == (False)) # Prints out False
+
+
+
+
+
 
 
 
