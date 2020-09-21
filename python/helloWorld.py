@@ -9,7 +9,7 @@ print ("hello World")
 # variaveis
 
 ## podem ser declaradas como no java script
-## ou seja sem a didentificacao de tipo
+## ou seja sem a identificacao de tipo
 myint = 1
 myfloat = 1.10
 mystring = "hi" 
