@@ -1,5 +1,5 @@
   
-#!/usr/bin/env python
+
 # -*- coding: utf-8 -*-
 #
 #  
@@ -11,4 +11,4 @@ import whois
 name = raw_input("Enter a domain: ")
 w = whois.whois(name)
 
-print w
+print(w)
