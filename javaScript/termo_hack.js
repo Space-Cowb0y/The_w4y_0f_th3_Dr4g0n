@@ -1,3 +1,4 @@
+//teste the commit
 const solucao = JSON.parse(window.localStorage.termo).state;
 const solucaoduo = JSON.parse(window.localStorage.duo).state;
 const solucaoquatro = JSON.parse(window.localStorage.quatro).state;
