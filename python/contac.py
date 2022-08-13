@@ -1,3 +1,6 @@
+import string
+
+
 def add(word, dictio):
     if len(word)==1:
         if word[0] not in dictio.keys():
